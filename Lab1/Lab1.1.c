@@ -50,9 +50,9 @@ int main() {
     do {
         fflush(stdin);
         printf("Enter starting time(please, use \"6 00\" format): ");
-        /*736jtjesu758eyfflush(stdin);*/
     }
-    while (scanf(" %d %d", &startHours, &startMinutes) != 2 || startHours > 22 || startMinutes > 60 );
+    while (scanf(" %d %d", &startHours, &startMinutes) != 2 || startHours > 22 || startMinutes > 60);
+    fflush(stdin);
     startMinutes += startHours * 60;
 
     do {
