@@ -10,7 +10,7 @@ struct Workshop {
 	char productName[31] = "Product";
 	int released = 0;
 	int defect = 0;
-	int workers = 0
+	int workers = 0;
 };
 
 Workshop* createDataBase(int& size, int& current);
