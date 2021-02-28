@@ -1,37 +1,42 @@
 #include <stdio.h>
 
-void hoursPrint (unsigned const int* hours) {
-    if (*hours / 60 < 10) {
-        printf("0%d:", *hours / 60);
+void hoursPrint (unsigned const int hours) {
+    if (hours / 60 < 10) {
+        printf("0%d:", hours / 60);
     }
     else {
-        printf("%d:", *hours / 60);
+        printf("%d:", hours / 60);
     }
 }
 
-void minutesPrint (unsigned const int* minutes) {
-    if (*minutes % 60 < 10) {
-        printf("0%d", *minutes % 60);
+void minutesPrint (unsigned const int minutes) {
+    if (minutes % 60 < 10) {
+        printf("0%d", minutes % 60);
     }
     else {
-        printf("%d", *minutes % 60);
+        printf("%d", minutes % 60);
     }
 }
 
 void oneWay(unsigned int* startMinutes, unsigned const int travelTime, unsigned const int breakTime) {
-    hoursPrint (startMinutes);
-    minutesPrint (startMinutes);
+    hoursPrint (*startMinutes);
+    minutesPrint (*startMinutes);
     printf(" - ");
 
     *startMinutes += travelTime;
     
-    hoursPrint (startMinutes);
-    minutesPrint (startMinutes);
+    hoursPrint (*startMinutes);
+    minutesPrint (*startMinutes);
 
     *startMinutes += breakTime;
 }
 
-void calcShedule (unsigned int* startMinutes, unsigned const int finishMinutes, unsigned const int travelTime, unsigned const int breakTime) {
+void calcShedule (
+    unsigned int* startMinutes,
+    unsigned const int finishMinutes,
+    unsigned const int travelTime,
+    unsigned const int breakTime
+) {
     printf(" From A to B \t\t\tFrom B to A\n");
 
     /*The work of the bus includes the path to the starting point, so there will be no path only to B*/
@@ -58,7 +63,7 @@ int main() {
     do {
         fflush(stdin);
         printf("Enter finish time(please, use \"22 00\" format): ");
-        fflush(stdin);
+        fflush(stdin)
     }
     while (scanf(" %d %d", &finishHours, &finishMinutes) != 2 || finishHours <= startHours ||
           ((finishHours == 24 && finishMinutes != 0) || finishHours > 24 || finishMinutes > 60));
