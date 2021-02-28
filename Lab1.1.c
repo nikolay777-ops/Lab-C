@@ -64,7 +64,8 @@ int main() {
         fflush(stdin);
         printf("Enter finish time(please, use \"22 00\" format): ");
         fflush(stdin)
-    }
+       
+    
     while (scanf(" %d %d", &finishHours, &finishMinutes) != 2 || finishHours <= startHours ||
           ((finishHours == 24 && finishMinutes != 0) || finishHours > 24 || finishMinutes > 60));
     finishMinutes += finishHours * 60;
