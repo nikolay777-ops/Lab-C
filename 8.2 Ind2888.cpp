@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include <iomanip.
+#include <iomanip>
 #include <fstream>
 #include <cstdlib>
 using namespace std;
