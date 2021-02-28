@@ -1,15 +1,15 @@
-﻿using System
-using System.Numeri
+﻿using System;
+using System.Numerics;
 
 namespace Lab1
 {
     class Lab1 
     {
-        private static int numberOfRoots = 0
+        private static int numberOfRoots = 0;
 
         static void Main(string[] args)
         {
-            Complex[] roots = new Complex[3]
+            Complex[] roots = new Complex[3];
             equatationSolver(roots);
 
             Console.WriteLine("There is(are) {0} root(s)", numberOfRoots);
