@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include <iomani
+#include <iomanip.
 #include <fstream>
 #include <cstdlib>
 using namespace std;
 
 class Book {
 private:
-	string regis\trationNumber_ = "00000";
+	string registrationNumber_ = "00000";
 	string author_ = "Author";
 	string title_ = "Title";
-	int year_ = 0\;
+	int year_ = 0;
 	string publisher_ = "Publisher";
 	int pages_ = 0;
 public:
