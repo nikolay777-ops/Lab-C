@@ -68,7 +68,7 @@ namespace Lab1
                                     new Complex(-0.5, squareRootOf3 / 2.0) };
 
             //Assistants and deltas help to simplufy calculations
-            double delta0 = squareСoef * squareСoef - 3 * cubicСoef * linearСo
+            double delta0 = squareСoef * squareСoef - 3 * cubicСoef * linearСoef;
             double delta1 = 2 * squareСoef * squareСoef * squareСoef - 9 * cubicСoef * squareСoef * linearСoef +
                             27 * cubicСoef * cubicСoef * zeroСoef;
 
