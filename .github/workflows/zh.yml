@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: |
+        git clone -b main --single-branch https://github.com/MaximSelhanovich/Lab-C
+        cd Lab-C/Lab1/ 
+        make test 
+        ./test < text_test.txt
