@@ -15,3 +15,10 @@ jobs:
         cd Lab-C/Lab1/ 
         make Lab1_2_Test
         ./Lab1_2_Test 
+        
+  pre-commit:
+    runs-on: Ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-python@v1
+      - uses: pre-commit/action@v2.0.0
