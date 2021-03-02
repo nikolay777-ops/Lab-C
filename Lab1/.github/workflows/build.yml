@@ -14,4 +14,4 @@ jobs:
         run: |
           cd Lab-C/Lab1/ 
           make test 
-          ./test
+          ./test < text_test.txt
