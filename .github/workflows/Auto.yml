@@ -17,8 +17,9 @@ jobs:
           ./Lab1_2_Test 
         
   pre-commit:
-    if: --all-files
+
     runs-on: Ubuntu-20.04
+    
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-python@v1
