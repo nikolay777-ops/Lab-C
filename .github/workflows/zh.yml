@@ -13,5 +13,5 @@ jobs:
     - run: |
         git clone -b main --single-branch https://github.com/MaximSelhanovich/Lab-C
         cd Lab-C/Lab1/ 
-        make test 
-        ./test < text_test.txt
+        make Lab1_2_Test
+        ./Lab1_2_Test 
