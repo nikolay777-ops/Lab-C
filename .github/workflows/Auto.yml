@@ -1,5 +1,4 @@
 name: Builder
-pre-commit run: --all-files
 
 on:
   push:
