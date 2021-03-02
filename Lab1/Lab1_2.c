@@ -12,8 +12,9 @@ int main() {
         for(j = i; j < 100; ++j) {
             for(k = i; k < 100; ++k) {
                 if(checkPythagoreanNumbers(i, j, k) != 0) {
-                    printf("%d^2 + %d^2 = %d^2", i, j, k);
+                    counter++;
                 } 
+                if(counter == 10) return 0;
             }
         }
     }
