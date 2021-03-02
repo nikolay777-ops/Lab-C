@@ -1,2 +1,4 @@
-main: Lab1.1.c
-	gcc -ansi -pedantic -Werror -o main Lab1.1.c -lm
+Lab1_2: Lab1_2.c
+	gcc -ansi -pedantic -o Lab1_2 Lab1_2.c
+Lab1_2_Test: Lab1_2_Test.c Lab1_2.c
+	gcc -ansi -pedantic -o Lab1_2_Test.c Lab1_2.c -D TEST
