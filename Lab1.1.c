@@ -18,24 +18,6 @@ void minutesPrint (unsigned const int minutes) {
     }
 }
 
-void minutesPrint (unsigned const int minutes) {
-    if (minutes % 60 < 10) {
-        printf("0%d", minutes % 60);
-    }
-    else {
-        printf("%d", minutes % 60);
-    }
-}
-
-void minutesPrint (unsigned const int minutes) {
-    if (minutes % 60 < 10) {
-        printf("0%d", minutes % 60);
-    }
-    else {
-        printf("%d", minutes % 60);
-    }
-}
-
 void oneWay(unsigned int* startMinutes, unsigned const int travelTime, unsigned const int breakTime) {
     hoursPrint (*startMinutes);
     minutesPrint (*startMinutes);
