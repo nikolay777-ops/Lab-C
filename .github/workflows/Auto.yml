@@ -2,7 +2,7 @@ name: Builder
 
 on:
   push:
-    branches: [ Lab1 ]
+    branches: [Lab1]
 
 jobs:
   build:
@@ -10,11 +10,11 @@ jobs:
     runs-on: Ubuntu-20.04
 
     steps:
-    - run: |
-        git clone -b Lab1 --single-branch https://github.com/MaximSelhanovich/Lab-C
-        cd Lab-C/Lab1/ 
-        make Lab1_2_Test
-        ./Lab1_2_Test 
+      - run: |
+          git clone -b Lab1 --single-branch https://github.com/MaximSelhanovich/Lab-C
+          cd Lab-C/Lab1/ 
+          make Lab1_2_Test
+          ./Lab1_2_Test 
         
   pre-commit:
     runs-on: Ubuntu-20.04
