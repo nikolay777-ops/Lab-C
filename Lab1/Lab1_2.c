@@ -11,15 +11,16 @@ int main() {
     for (i = 1;; ++i) {
         for(j = i; j < 100; ++j) {
             for(k = i; k < 100; ++k) {
-                checkPythagoreanNumbers (i, j, k); 
+                if(checkPythagoreanNumbers(i, j, k) != 0) {
+                    printf("%d^2 + %d^2 = %d^2", i, j, k);
+                } 
             }
         }
     }
     return 0;
 }
-
 #endif
 
 int checkPythagoreanNumbers (int first, int second, int third) {
-return first * first + second * second == third * third; 
+    return first * first + second * second == third * third; 
 }
