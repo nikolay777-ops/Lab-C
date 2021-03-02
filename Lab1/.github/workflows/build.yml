@@ -1,0 +1,17 @@
+
+name: Builder
+
+on: push
+
+jobs:
+
+  build:
+    name: Build the program
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Build
+        run: |
+          cd Lab-C/Lab1/ 
+          make test 
+          ./test
