@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - run: |
-          cd Lab-C/Lab1/ 
+          cd Lab1/ 
           make Lab1_2_Test
           ./Lab1_2_Test 
         
