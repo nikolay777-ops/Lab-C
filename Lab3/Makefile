@@ -23,3 +23,4 @@ all: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
 .PHONY: clean
 clean:
 	del *.exe
+
