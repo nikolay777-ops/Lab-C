@@ -16,10 +16,9 @@ CheckValgrind:
 	valgrind ./Lab3_2_12_Test
 
 CheckLinter:
-	cpplint --extensions=c $(OBJ_TEST)
-	exit 0
+	cpplint $(OBJ_TEST)
 
-all: Lab3_2_12 Lab3_2_12_Test CheckValgrind
+all: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
 
 .PHONY: clean
 clean:
