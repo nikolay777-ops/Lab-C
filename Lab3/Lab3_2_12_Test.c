@@ -6,8 +6,8 @@ void testCheckNULL() {
     int test = 0;
     int *testPtr = &test;
 
-    assert(checkNULL (NULL) == 0);
-    assert(checkNULL (testPtr) == 1);
+    assert(checkNULL(NULL) == 0);
+    assert(checkNULL(testPtr) == 1);
     printf("NULL check test completed.\n");
 }
 
