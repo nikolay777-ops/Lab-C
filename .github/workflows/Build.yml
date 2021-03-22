@@ -16,6 +16,6 @@ jobs:
       run: |
           apt install valgrind
           pip install cpplint
-	
+          
     - name: Test them all
       run: make all -C Lab3/
