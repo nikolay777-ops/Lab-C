@@ -8,14 +8,14 @@ int main() {
 
     printf("Enter the size of Latin square\n");
     size = getValidUInt();
-    while(size > 100) {
+    while (size > 100) {
         printf("Wrong input, too large matrix size\n"
                "Please, try again: ");
         size = getValidUInt();
     }
 
     latinSquare = getTwoDimensionalArray(size, size);
-    if(!latinSquare) return 0;
+    if (!latinSquare) return 0;
     getLatinSquare(latinSquare, size);
 
     printMatrix(size, latinSquare);
@@ -28,7 +28,7 @@ unsigned int getValidUInt() {
     unsigned int temp;
     char goodCheck;
 
-    while(!scanf("%u", &temp) || temp == 0 ||
+    while (!scanf("%u", &temp) || temp == 0 ||
           (scanf("%c", &goodCheck) && goodCheck != '\n')) {
         printf("Wrong input!\nPlease, try again: ");
         fflush(stdin);
@@ -39,8 +39,8 @@ unsigned int getValidUInt() {
 void printMatrix(unsigned int size, unsigned int **matrix) {
     unsigned int i, j;
 
-    for(i = 0; i < size; ++i) {
-        for(j = 0; j < size; ++j) {
+    for (i = 0; i < size; ++i) {
+        for (j = 0; j < size; ++j) {
             printf("%3d ", matrix[i][j]);
         }
         printf("\n");
@@ -48,7 +48,7 @@ void printMatrix(unsigned int size, unsigned int **matrix) {
 }
 
 int checkNULL (void *ptr) {
-    if(ptr == NULL) {
+    if (ptr == NULL) {
         printf("Error, there is no memory to allocate!\n");
         return 0;
     }
@@ -61,11 +61,12 @@ unsigned int **getTwoDimensionalArray(unsigned int rowsNumber,
     unsigned int i;
 
     array = (unsigned int **)malloc(rowsNumber * sizeof(unsigned int *));
-    if(!checkNULL(array)) return NULL;
+    if (!checkNULL(array)) return NULL;
 
-    for(i = 0; i < columnsNumber; ++i) {
-        array[i] = (unsigned int *)malloc(columnsNumber * sizeof(unsigned int *));
-        if(!checkNULL(array[i])) return NULL;
+    for (i = 0; i < columnsNumber; ++i) {
+        array[i] =
+            (unsigned int *)malloc(columnsNumber * sizeof(unsigned int *));
+        if (!checkNULL(array[i])) return NULL;
     }
     return array;
 }
@@ -73,15 +74,15 @@ unsigned int **getTwoDimensionalArray(unsigned int rowsNumber,
 void getLatinSquare(unsigned int **arrayToFill, unsigned int size) {
     unsigned int i, j, number;
 
-    if(!arrayToFill) {
+    if (!arrayToFill) {
         printf("Wrong input! This array is NULL.");
         return;
     }
 
-    for(i = 0; i < size; ++i) {
+    for (i = 0; i < size; ++i) {
         number = i + 1;
-        for(j = 0; j < size; ++j) {
-            if(number == size + 1) number = 1;
+        for (j = 0; j < size; ++j) {
+            if (number == size + 1) number = 1;
             arrayToFill[i][j] = number;
             ++number;
         }
@@ -92,12 +93,12 @@ void *clearTwoTwoDimensionalArray(void **arrayToClean,
                                   unsigned int rowsNumber) {
     unsigned int i;
     
-    if(!arrayToClean) {
+    if (!arrayToClean) {
         printf("This array is already clean.\n");
         return NULL;
     }
     
-    for(i = 0; i < rowsNumber; ++i) free(arrayToClean[i]);
+    for (i = 0; i < rowsNumber; ++i) free(arrayToClean[i]);
     free(arrayToClean);
 
     printf("Memory cleaned\n");
