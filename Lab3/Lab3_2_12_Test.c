@@ -26,6 +26,7 @@ void testMemoryManagement() {
 #undef main
 
 int main() {
+    printf("Tests start.\n")
     testCheckNULL();
     testMemoryManagement();
     printf("All tests are completed.\n");
