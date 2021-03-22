@@ -1,0 +1,23 @@
+name: Build-and-test
+
+on: push
+	branches: [Lab3]
+
+jobs:
+
+  buildandtest:
+
+    name: Build and test the program
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+		
+	  - name: Installing valgrind and cpplint
+	  	 run: |
+		 	apt install valgrind
+			pip install cpplint
+			
+      - name: Test them all
+	     run: make all -C Lab3/
