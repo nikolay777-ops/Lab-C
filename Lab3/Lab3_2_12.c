@@ -47,7 +47,7 @@ void printMatrix(unsigned int size, unsigned int **matrix) {
     }
 }
 
-int checkNULL (void *ptr) {
+int checkNULL(void *ptr) {
     if (ptr == NULL) {
         printf("Error, there is no memory to allocate!\n");
         return 0;
@@ -86,19 +86,18 @@ void getLatinSquare(unsigned int **arrayToFill, unsigned int size) {
             arrayToFill[i][j] = number;
             ++number;
         }
-    }    
+    }
 }
 
 void *clearTwoTwoDimensionalArray(void **arrayToClean,
                                   unsigned int rowsNumber) {
     unsigned int i;
-    
     if (!arrayToClean) {
         printf("This array is already clean.\n");
         return NULL;
     }
     
-    for (i = 0; i < rowsNumber; ++i) free(arrayToClean[i]);
+    for (i = 0; i < rowsNumber; ++i)free(arrayToClean[i]);
     free(arrayToClean);
 
     printf("Memory cleaned\n");
