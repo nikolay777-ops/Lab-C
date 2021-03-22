@@ -10,17 +10,15 @@ Lab3_2_12: $(OBJ)
 Lab3_2_12_Test: $(OBJ_TEST)
 	$(CC) $(CFLAGS) $(OBJ_TEST) -o Lab3_2_12_Test -Dmain=_main $(LIBS)
 
-RunTest:
-	./Lab3_2_12_Test
-
 CheckValgrind:
 	echo "15\n" > input.txt
-	valgrind ./Lab3_2_12_Test < input.txt
+	valgrind ./Lab3_2_12 < input.txt
+	valgrind ./Lab3_2_12_Test
 
 CheckLinter:
-	cpplint --extensions=c $(OBJ) Lab3_2_12_Test.c
+	cpplint --extensions=c $(OBJ_TEST)
 
-all: Lab3_2_12_Test RunTest CheckValgrind CheckLinter
+all: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
 
 .PHONY: clean
 clean:
