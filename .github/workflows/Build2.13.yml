@@ -19,6 +19,6 @@ jobs:
       
       - name: Doing all 
         run: |
-          cd Lab2/Lab2.13 
+          cd Lab2/Lab2.13/ 
           make TESTALL
           ./Lab2.13Test 
