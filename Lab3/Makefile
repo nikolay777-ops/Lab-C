@@ -18,7 +18,7 @@ CheckValgrind:
 	valgrind ./Lab3_2_12_Test < input.txt
 
 CheckLinter:
-	cpplint $(OBJ)
+	cpplint --extensions=c $(OBJ)
 	cpplint Lab3_2_12_Test.c
 
 all: Lab3_2_12_Test RunTest CheckValgrind CheckLinter
