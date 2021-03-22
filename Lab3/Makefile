@@ -16,7 +16,7 @@ CheckValgrind:
 	valgrind ./Lab3_2_12_Test
 
 CheckLinter:
-	cpplint --filter=-readability/casting $(OBJ_TEST)
+	cpplint --filter=-readability/casting,-legal/copyright $(OBJ_TEST)
 
 all: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
 
