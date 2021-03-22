@@ -1,5 +1,3 @@
-
-
 name: build-and-test
 
 on: push
@@ -8,15 +6,16 @@ jobs:
 
   buildandtest:
 
-    name: Build and test the program
-
     runs-on: ubuntu-latest
     steps:
+    
     - name: Checkout code
       uses: actions/checkout@v2
+      
     - name: Installin
       run: |
-      	apt install valgrind
-	pip install cpplint
+          apt install valgrind
+          pip install cpplint
+	
     - name: Test them all
       run: make all -C Lab3/
