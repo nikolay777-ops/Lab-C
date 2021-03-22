@@ -12,10 +12,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Installin
+    - name: Installing valgring and cpplint
       run: |
           sudo apt install valgrind
           sudo pip install cpplint
           cpplint --help
+          
     - name: Test them all
       run: make all -C Lab3/
