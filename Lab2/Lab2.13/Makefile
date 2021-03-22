@@ -12,4 +12,4 @@ Valgrind:
 Linter:
     cpplint --filter=-readability/casting,-legal/copyright Lab2.13.c Lab2.13Test.c
     
-TESTALL: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
+TESTALL: Lab2.13 Lab2.13Test Valgrind Linter
