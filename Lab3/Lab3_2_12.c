@@ -21,7 +21,7 @@ int main() {
     printMatrix(size, latinSquare);
     /*cast to (void **) is done to aVoid warnings from the compiler*/
     latinSquare = clearTwoTwoDimensionalArray((void **)latinSquare, size);
-    return 0;    
+    return 0;
 }
 
 unsigned int getValidUInt() {
@@ -96,7 +96,6 @@ void *clearTwoTwoDimensionalArray(void **arrayToClean,
         printf("This array is already clean.\n");
         return NULL;
     }
-    
     for (i = 0; i < rowsNumber; ++i)free(arrayToClean[i]);
     free(arrayToClean);
 
