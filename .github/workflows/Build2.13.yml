@@ -1,0 +1,24 @@
+name: Builder
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: Ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Valgrind and Linter
+      - run: |
+          sudo apt install valgrind
+          sudo pip install cpplint
+          cpplint --help
+      
+      - name: Doing all 
+        run: |
+          cd Lab2/Lab2.13 
+          make TESTALL
+          ./Lab2.13Test 
