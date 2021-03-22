@@ -19,7 +19,7 @@ CheckLinter:
 	cpplint --extensions=c $(OBJ_TEST)
 	exit 0
 
-all: Lab3_2_12 Lab3_2_12_Test CheckValgrind CheckLinter
+all: Lab3_2_12 Lab3_2_12_Test CheckValgrind
 
 .PHONY: clean
 clean:
