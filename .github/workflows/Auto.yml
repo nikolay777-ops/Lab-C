@@ -11,13 +11,14 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    
+    - name: Checkout code
+      uses: actions/checkout@v2
 		
-	  - name: Installing valgrind and cpplint
-	  	 run: |
-		 	apt install valgrind
-			pip install cpplint
+    - name: Installing valgrind and cpplint
+       run: |
+	apt install valgrind
+	pip install cpplint
 			
-      - name: Test them all
-	     run: make all -C Lab3/
+    - name: Test them all
+        run: make all -C Lab3/
